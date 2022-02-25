@@ -8,7 +8,7 @@ The detail of **light weight gated convolution** and **Contextual Residual Aggre
 
 Below is the overview of pipeline for running high resolution on mobile:
 
-https://github.com/hyolee1999/Improved_Cr_fill/blob/main/image.PNG
+![alt text](https://github.com/hyolee1999/Improved_Cr_fill/blob/main/image.PNG)
 
 ## Train
 
