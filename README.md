@@ -23,6 +23,11 @@ Below is the overview of pipeline for running high resolution on mobile:
 ## Testing and Evaluating
 - For testing and evaluating , you can checkout the **validation_fix.ipynb** for more detail
 
+## Others
+- **torch_to_tf_fix.ipynb** is to convert model weights and Contextual Residual Aggregation module from pytorch to tensorflow and tflite.
+- **pre_and_post_process.ipynb** is to create and convert preprocess and postprocess function from tensorflow to tflite.
+- **hi_fill_fix.ipynb** is to test the pipeline .
+
 
 
 
