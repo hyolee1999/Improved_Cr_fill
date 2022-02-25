@@ -6,7 +6,9 @@ I use in total two models:
 Contextual Residual Aggregation 
 The detail of **light weight gated convolution** and **Contextual Residual Aggregation** can be found in [Contextual Residual Aggregation for Ultra High-Resolution Image Inpainting](https://arxiv.org/abs/2005.09704).
 
+Below is the overview of pipeline for running high resolution on mobile:
 
+https://github.com/hyolee1999/Improved_Cr_fill/blob/main/image.PNG
 
 ## Train
 
