@@ -1,0 +1,63 @@
+preprocess:
+
+input0 : raw image (1,h,w,3) (float32)
+input1 : raw mask(1,h,w,1)(float32)
+input2 : coefficient for multiply with resized image (1,1) (int32)
+input3 : resized image (int32)                 
+(for example , image with size 1100x1100 and we want to resize image to 512x512 so image should be resized to nearest size that can be divisible with 512x512size which is 1024x1024 so coef will be 2)
+
+output0 : large image ( 1 , size of resized images * coefficient,size of resized images * coefficient,3) 
+output1 : large mask( 1 , size of resized images * coefficient,size of resized images * coefficient,1) 
+output2 : resized image (1,  size of resized images ,size of resized images ,3) 
+output3 : resized mask( 1, size of resized images,size of resized images ,1) 
+
+
+cr-model:
+input0 : resized image  * (1 - resized mask)
+input1 : resized mask
+input1 : matrix of full one( 1, size of resized images ,size of resized images ,1)
+
+output0 : inpainted image (1, size of resized images ,size of resized images ,3)
+
+output1 : pm ( 1, size of resized images/4 ,size of resized images/4 ,96)
+
+contextual :
+input0 : pm
+
+input1 : resized mask
+
+input2 : size of resized images/8 (1,1) (int32)
+
+input3 : size of resized images/8 (1,1) (int32)
+
+output0 : score (1,size of resized images/8,size of resized images/8 ,1024 )
+
+
+post_process :
+
+
+
+input0: large image
+
+input1: large mask
+
+input2: inpainted image 
+
+input3: resized image
+
+input4: resized mask
+
+input5:  score
+
+input6 : coefficient 
+
+input7: size of resized image (1,1)
+
+input8 : size of resized image/8 (1,1)
+
+input9 : width of raw image(1,1) (int32)
+
+input10 : height of  raw image (1,1) (int32)
+
+
+output0 : full ảnh inpaint (1,h,w,3) (ko cần normalize)

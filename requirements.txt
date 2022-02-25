@@ -1,0 +1,6 @@
+scikit-image ~= 0.15.0
+numpy
+tensorboardX
+torch ~= 1.4
+torchvision ~= 0.2.1
+tensorflow ~= 2.5.0
