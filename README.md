@@ -6,6 +6,8 @@ I use in total two models:
 Contextual Residual Aggregation 
 The detail of **light weight gated convolution** and **Contextual Residual Aggregation** can be found in [Contextual Residual Aggregation for Ultra High-Resolution Image Inpainting](https://arxiv.org/abs/2005.09704).
 
+
+
 ## Train
 
 1. If you want to train from scratch , you need to remove checkpoints, create flist.py of paths to images used to train which will be more detail in [edge-connect ](https://github.com/knazeri/edge-connect) and create config.py of hyper-parameters as in generative_inpaintingv2/contextual_loss_fix_mask_wise_and_pixel_shuffle/checkpoint/checkpoint_change_dis or reuse config.py  if you can to continue the training
